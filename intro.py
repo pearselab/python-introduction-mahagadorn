@@ -35,6 +35,20 @@ for i in range(20, 9, -2):
     print(i)
 
 
-##4 Write a list comprehension that prints out only the numbers from 20 to 10 that are even
-
+## 4. Write a list comprehension that prints out only the numbers from 20 to 10 that are even
+#convert the above loop to list comprehension format
 even_faster = [i for i in range(20, 9, -2)]
+
+
+## 5. Write a function that calculates whether a number is a prime number
+## (hint: what does 2 % 3 give you?)
+
+def prime (x):
+    for(i in range((x-1),2, -1)
+        r = (x % i)
+        if(x < 2)
+            return(Not Prime)
+        if(r == 0)
+            return(Not Prime)
+        else
+            return(Prime!)
