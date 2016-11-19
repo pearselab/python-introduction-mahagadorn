@@ -95,5 +95,21 @@ with open('Question6_py1.txt') as input_file:
 
 
 
-def in_place(list):
-list.append("hath made its masterpiece")
+
+
+with open('Question6_py1.txt') as input_file:
+    for line in input_file:
+        print(line[4])
+        lets5 = line[4]    #stores it as length of one....not what we need then we can't subset it
+        print(lets5)   #is of lengthone...blurg
+
+
+
+
+
+
+with open('Question6_py1.txt') as input_file:
+    for line in input_file:
+        line = line.rstrip()
+        whole_words = line.split()
+        word = whole_words[4]
