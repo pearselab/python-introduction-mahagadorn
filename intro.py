@@ -5,6 +5,7 @@
 ##Getting into python interpreter via command line
 #use > python3
 #This will allow you to work in python3 through command line
+#Mallorys-MacBook-Pro:python-introduction-mahagadorn Mal$ python3 intro.py
 
 
 ## 1. Write a loop that prints out the numbers from 20 to 10
@@ -44,11 +45,55 @@ even_faster = [i for i in range(20, 9, -2)]
 ## (hint: what does 2 % 3 give you?)
 
 def prime (x):
-    for(i in range((x-1),2, -1)
-        r = (x % i)
-        if(x < 2)
-            return(Not Prime)
-        if(r == 0)
-            return(Not Prime)
-        else
-            return(Prime!)
+    for i in range(x-1, 2 , -1):
+        if x < 2:               #if x is less than 2 return false: not prime
+            return False
+        elif x == 4:            #for some reason it kept giving me four as prime, so I added this elif statment
+            return False
+        elif x % i == 0:        #if the remainder of anything along the range is 0 its false: aka divisible by more than itself and one
+            return False
+    return True                 #the rest would be prime so return true
+
+
+ #Mal, like a moron you spent about a hour trouble shooting stupid mistakes
+ #You kept getting syntax errors: this is because you kept forgetting the : after loops
+ #Also, note to self indent returns
+ #Note to self 2, make sure your final return is at the same indentation as you first loop
+
+
+
+## 6. Write a function that loads a text file, loops over the lines in it, and prints out the
+#fifth character on the fifth line of that file.
+
+#“Hint” (really, frankly, this is the solution):
+#with open("name_of_file") as handle:
+#for line in handle:
+#Do something
+
+def char_five (file_name):
+     with open('file_name', 'rt') as input_file: #open() reads in text file; 'rt'=open file as read text data
+        content = input_file.read()
+        print(content)
+        ###THIS PRINTS ALL CONTENT!
+
+
+with open('Question6_py1.txt') as input_file:
+    for n, line in enumerate(input_file.readlines()):
+        if n == 4 & line == 4
+print (n, line)
+###Prints the last line Not working
+
+
+
+with open('Question6_py1.txt') as input_file:
+    enum_lines = list(enumerate(input_file))
+    line5 = enum_lines[4]
+    char5 = line5[4]   #the problem is its saved as a tuple...can't be modified so its of length two!
+    print(char5)
+#Also doesnt working
+
+
+
+
+def in_place(list):
+list.append("hath made its masterpiece")
