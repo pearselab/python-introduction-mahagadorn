@@ -18,4 +18,6 @@ l = to_sort
     #the above line is saying for some index in the range of staring position
     #length of our list minus one to the stopping position 0 (no more values in list
     #that haven't been examined), by increments that decrease by one.
-    
+
+range(len(x)-1, 0 , -1)
+#Will this mean that it starts at position of length - 1? 
