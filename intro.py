@@ -70,46 +70,25 @@ def prime (x):
 #for line in handle:
 #Do something
 
-def char_five (file_name):
-     with open('file_name', 'rt') as input_file: #open() reads in text file; 'rt'=open file as read text data
-        content = input_file.read()
-        print(content)
-        ###THIS PRINTS ALL CONTENT!
+
+#This does not work it give your call content
+# def char_five (file_name):
+#      with open('file_name', 'rt') as input_file: #open() reads in text file; 'rt'=open file as read text data
+#         content = input_file.read()
+#         print(content)
+#         ###THIS PRINTS ALL CONTENT!
+#I have fixed this below
 
 
 with open('Question6_py1.txt') as input_file:
     for n, line in enumerate(input_file.readlines()):
-        if n == 4 & line == 4
-print (n, line)
-###Prints the last line Not working
+        if n == 4:
+            print (line[4])
 
-
-
-with open('Question6_py1.txt') as input_file:
-    enum_lines = list(enumerate(input_file))
-    line5 = enum_lines[4]
-    char5 = line5[4]   #the problem is its saved as a tuple...can't be modified so its of length two!
-    print(char5)
-#Also doesnt working
-
-
-
-
-
-
-with open('Question6_py1.txt') as input_file:
-    for line in input_file:
-        print(line[4])
-        lets5 = line[4]    #stores it as length of one....not what we need then we can't subset it
-        print(lets5)   #is of lengthone...blurg
-
-
-
-
-
-
-with open('Question6_py1.txt') as input_file:
-    for line in input_file:
-        line = line.rstrip()
-        whole_words = line.split()
-        word = whole_words[4]
+###This is working. Let's talk about how you fixed the issue.
+#Enumerate gives you the line number and the line that corresponds to that number
+# EX. 1) Text
+#My mistake is that I was trying to subset line twice
+# n==4 & line==4
+# SOOOO by simply calling the line by saying n==4 we get the text there too
+#Then we subset line[at the appropriate positon]
