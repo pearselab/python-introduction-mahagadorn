@@ -79,11 +79,13 @@ def prime (x):
 #         ###THIS PRINTS ALL CONTENT!
 #I have fixed this below
 
-
-with open('Question6_py1.txt') as input_file:
-    for n, line in enumerate(input_file.readlines()):
-        if n == 4:
-            print (line[4])
+#Working Good
+def char_five (file_name):
+    x = file_name
+    with open(x) as input_file:
+        for n, line in enumerate(input_file.readlines()):
+            if n == 4:
+                print (line[4])
 
 ###This is working. Let's talk about how you fixed the issue.
 #Enumerate gives you the line number and the line that corresponds to that number
