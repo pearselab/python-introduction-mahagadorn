@@ -131,3 +131,44 @@ for each in range(1, 20, 1):
 def gompertz (a, b, c, t):
     return a **(-b**(-c * t))
 gompertz(2,3,4,5)
+
+
+
+
+## 9. Write a function that draws boxes of a specified width and height that look like this (height 3, width 5):
+
+def ImABox (height, width):
+    the_row = "*" * width
+    spacer = (height - 2)
+    print(the_row)
+    ##
+    if(height < 3):
+        return("Can't make a box of this height")
+    if(width < 1):
+        return("Can't make a box of this width")
+    ##
+    for i in range(spacer):   #for i in len(spacer): didn't work, error=
+        print("*" + " "*(width-2) + "*")
+    ##
+    print(the_row)
+
+ImABox(3,5)
+
+#This Works AWESOME!
+#MAH note to self: initially you have len(spacer)
+#this did not work because it said "object of type 'int' has no len()"
+#meaning that the integer doesnt have a length
+#hindsight, this makes sense! the integer doesnt have a length because it
+#is not a list...I think?
+
+#=3-2
+#>>> type(x)
+#<class 'int'>
+#so its an integer not a list or a tuple. Yes it does make sense len() didn't work
+
+
+
+
+
+## 10. Implement a point class that holds x and y information for a point in space. Note that I am not asking
+# you to plot that line.
