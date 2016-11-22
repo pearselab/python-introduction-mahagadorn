@@ -172,3 +172,21 @@ ImABox(3,5)
 
 ## 10. Implement a point class that holds x and y information for a point in space. Note that I am not asking
 # you to plot that line.
+
+class point:
+    def __init__(self, x, y):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
+        self.x, self.y = x,y
+
+pointA=point(5,6)
+pointB=point(1,2)
+
+
+
+##11. Write a distance method that calculates the distance between two points in space.
+class point:
+    def __init__(self, x, y):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
+        self.x, self.y = x,y
+    def dist_points (self, ptOne, ptTwo):
+        return math.sqrt(x)
+
+#NEED TO THINK MORE ABOUT THIS ONE!
