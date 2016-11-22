@@ -38,6 +38,7 @@ for i in range(20, 9, -2):
 
 ## 4. Write a list comprehension that prints out only the numbers from 20 to 10 that are even
 #convert the above loop to list comprehension format
+
 even_faster = [i for i in range(20, 9, -2)]
 
 
@@ -53,6 +54,11 @@ def prime (x):
         elif x % i == 0:        #if the remainder of anything along the range is 0 its false: aka divisible by more than itself and one
             return False
     return True                 #the rest would be prime so return true
+
+prime(5)
+prime(2)
+prime(20)
+
 
 
  #Mal, like a moron you spent about a hour trouble shooting stupid mistakes
@@ -87,6 +93,9 @@ def char_five (file_name):
             if n == 4:
                 print (line[4])
 
+char_five('Question6_Py1.txt')
+
+
 ###This is working. Let's talk about how you fixed the issue.
 #Enumerate gives you the line number and the line that corresponds to that number
 # EX. 1) Text
@@ -94,3 +103,31 @@ def char_five (file_name):
 # n==4 & line==4
 # SOOOO by simply calling the line by saying n==4 we get the text there too
 #Then we subset line[at the appropriate positon]
+
+
+
+
+## 7. Write a loop that prints out the numbers from 1 to 20, printing “Good: NUMBER” if the number is
+#divisible by five and “Job: NUMBER” if then number is prime, and nothing otherwise.
+
+#This works great: as per Will suggestion I translated his "perfect R code" to python.
+#That's easy when you have good code to convert! Thanks, Will. :)
+
+for each in range(1, 20, 1):
+    if prime(each):
+        print("Job: ", each)
+    if (each % 5)==0:
+        print("Good: ", each)
+
+
+
+##8 A biologist is modelling population growth using a Gompertz curve, which is defined as y(t) = a.e−b.e−c.t
+# where y is population size, t is time, a and b are parameters, and e is the exponential function. Write
+# them a function that calculates population size at any time for any values of its parameters.
+
+#This works, again used Will's code for inspiration
+#Returns populations size based on the values of arguments
+
+def gompertz (a, b, c, t):
+    return a **(-b**(-c * t))
+gompertz(2,3,4,5)
