@@ -130,6 +130,7 @@ for each in range(1, 20, 1):
 
 def gompertz (a, b, c, t):
     return a **(-b**(-c * t))
+
 gompertz(2,3,4,5)
 
 
@@ -175,7 +176,7 @@ ImABox(3,5)
 
 class point:
     def __init__(self, x, y):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
-        self.x, self.y = x,y
+        self.x, self.y= x,y
 
 pointA=point(5,6)
 pointB=point(1,2)
@@ -183,10 +184,12 @@ pointB=point(1,2)
 
 
 ##11. Write a distance method that calculates the distance between two points in space.
+import math
+
 class point:
     def __init__(self, x, y):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
-        self.x, self.y = x,y
+        self.x, self.y= x,y
     def dist_points (self, ptOne, ptTwo):
-        return math.sqrt(x)
+    return math.sqrt(((self.x-ptOne.x)**2)+((self.y-ptTwo.y)**2))
 
 #NEED TO THINK MORE ABOUT THIS ONE!
