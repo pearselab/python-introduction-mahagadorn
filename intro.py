@@ -165,7 +165,7 @@ ImABox(3,5)
 #=3-2
 #>>> type(x)
 #<class 'int'>
-#so its an integer not a list or a tuple. Yes it does make sense len() didn't work
+#so its an integer not a list or a tuple. Yes, it does make sense len() didn't work
 
 
 
@@ -185,11 +185,19 @@ pointB=point(1,2)
 
 ##11. Write a distance method that calculates the distance between two points in space.
 import math
-
 class point:
     def __init__(self, x, y):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
-        self.x, self.y= x,y
+        self.x, self.y = x,y
     def dist_points (self, ptOne, ptTwo):
-    return math.sqrt(((self.x-ptOne.x)**2)+((self.y-ptTwo.y)**2))
+        return math.sqrt(((self.x-ptTwo.x)**2)+((self.y-ptTwo.y)**2))
 
-#NEED TO THINK MORE ABOUT THIS ONE!
+#Need to figure out why this wont define!
+
+##12. Implement a line class that takes two point objects and makes a line between them. Note that I am not
+#asking you to plot that line.
+
+class new_line:
+    def __init__(self, start, end):  #REMINDER MUST USE SELF AS FIRST ARGUMENT
+        self.start, self.end = start,end
+
+line1=new_line(pointA, pointB)
